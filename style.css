@@ -1,0 +1,1268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*font poppins*/
+
+:root{
+    --background: rgb(21, 21, 21);
+    --color: rgb(191, 191, 191);
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    background-color: var(--background);
+    color: var(--color);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color);
+}
+
+.section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+    margin: 0;
+    padding: 20px 70px;
+}
+
+header{
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    height:50px;
+    padding: 2px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 5;
+    backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+
+header.scrolled {
+    background-color: rgba(21, 21, 21, 0.302); /* Fundo ao rolar */
+    backdrop-filter: blur(25px);
+}
+
+header nav{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+header nav button{
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color:var(--color);
+    border: solid 2px var(--color);
+    cursor: pointer;
+    opacity: 0.7;
+    font-weight: 600;
+    transition: ease-in-out 0.5s;
+}
+
+header nav button:hover{
+    border:solid 2px transparent;
+    background-color: rgba(191, 191, 191, 0.4);
+    backdrop-filter: blur(10px);
+    color: var(--background);
+    opacity: 1;
+    transition: border 0.7s ease-in-out, background-color, 0.7s ease-in-out, color 0.7s ease-in-out;
+}
+
+header nav button.active{
+    border:solid 2px transparent;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    color: var(--background);
+    opacity: 1;
+}
+
+#section1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    position: relative;
+}
+
+.midia-conteiner {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    /* position: absolute; */
+    padding: 0px;
+    margin: 0;    
+    width: 100%;
+    height: 700px;
+    z-index: -5;
+}
+
+.midia-conteiner video{
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    padding: 0;
+    margin: 0;
+    height: 700px;
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+.midia-conteiner img{
+    display: none;
+}
+
+.midia-conteiner.blurred { /* desfoque utilizado no javascript*/
+    filter: blur(8px);
+}
+
+#section1 .detalhes img{ /*logo*/
+    width: 300px;
+    filter: invert(100);
+}
+
+#section1 .span-conteiner{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#class-indicativa{
+    margin: 0;
+    padding: 2px 6px;
+    background-color: rgb(210, 40, 40);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#section1 .detalhes p{ 
+    padding: 0px 600px 0px 0px;
+}
+
+#section1 .sub-icons-conteiner{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+#section1 .sub-icons-conteiner button{ /*botoes 'trailer' e 'ativar som'*/
+    background-color: transparent;
+    color: var(--color);
+    border: solid 2px var(--color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 7px;
+}
+
+#section1 .sub-icons-conteiner .ativa-som{ /*botao 'ativar som' */
+    display: flex;
+    gap: 7px;
+}
+
+#section1 .sub-icons-conteiner .desativa-som{ /*botao 'desativar som'*/
+    display: none;
+    gap: 7px;
+}
+
+#section1 .sub-icons-conteiner button:hover{ /* HOVER botoes 'trailer' e 'ativar som'*/
+    opacity: 0.5;
+}
+
+.episodios{
+    padding: 0px 70px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.episodios #season-select{
+    cursor: pointer;
+}
+
+.episodios h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.episodios select{
+    padding: 5px 10px;
+    height: auto;
+    background-color:transparent;
+    color: var(--color);
+    border: solid 2px var(--color);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#section-2{
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+
+
+
+
+/* 
+.section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.section.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+} */
+
+
+
+
+
+
+
+
+/*section1 CARD CONTEINER*/
+
+.card-conteiner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-conteiner .card-episodio{
+    margin: 10px 0px;
+    padding: 10px;
+    width: 280px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 2px var(--color); */
+    box-shadow: 5px 5px 25px rgba(37, 37, 37, 0.7);
+    border-radius: 20px;
+    background-color: rgba(160, 160, 160, 0.2);
+    backdrop-filter: blur(30px);
+    transition: ease-in-out 0.5s;
+    cursor: not-allowed;
+}
+
+.card-conteiner .card-episodio img{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-conteiner .card-episodio h1{
+    padding: 0;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.card-conteiner .card-episodio p{
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+
+}
+
+.card-conteiner .card-episodio span{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.card-episodio span h6{
+    position: absolute;
+    padding: 2px 4px;
+    margin: 0;
+    top: -30px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    background-color: var(--background);
+    border-radius: 5px;
+}
+
+.card-episodio span i{
+    color: white;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: -30px;
+    left: 10px;
+
+}
+
+
+/*Conteiner de detalhes da serie*/
+.card-conteiner-detalhes{
+    margin: 70px 0px;
+    padding: 0px 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.card-conteiner-detalhes h1{
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card-conteiner-detalhes span{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.card-conteiner-detalhes p{
+    font-size: 13px;
+    margin: 4px;
+}
+
+
+.card-conteiner-detalhes .card-detalhes-serie{
+    margin: 10px 0px;
+    padding: 15px;
+    width: 290px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px var(--color);
+    border-radius: 25px;
+    background-color: rgba(160, 160, 160, 0.2);
+    backdrop-filter: blur(30px);
+    transition: ease-in-out 0.5s;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+
+}
+
+/*fim CARD CONTEINER*/
+
+/*card de personagens*/
+.card-personagens{
+    margin: 70px 0px 0px 0px;
+    padding: 0px 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 290px;
+}
+
+.card-personagens .personagem{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.card-personagens .personagem img{
+   width: 145px;
+   height: auto;
+   border-radius: 50%;
+   aspect-ratio: 1/1;
+   object-fit: cover;
+   margin: 0;
+   padding: 0;
+   border: 3px solid var(--color);
+}
+
+.card-personagens h1{
+    display: flex;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.card-personagens .personagem h2{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/*CArd das communidades*/
+.card-comunidades{
+    margin: 20px 0px 0px 0px;
+    padding: 0px 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+.card-comunidades .comunidade{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.card-comunidades .comunidade img{
+    width: 145px;
+    height: auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: 3px solid var(--color);
+}
+ 
+.card-comunidades h1{
+    display: flex;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+}
+ 
+.card-comunidades .comunidade h2{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/*CABEÇALHO*/
+footer{
+    margin: 0;
+    padding: 0px 70px;
+    background-color: rgba(37, 37, 37, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 13px;
+    min-height: 200px;
+    box-shadow: 1px -2px 10px rgba(37, 37, 37, 0.7);
+}
+
+footer .listas{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-self: flex-start;
+}
+
+footer .listas ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+footer .listas li{
+    text-decoration: underline;
+    margin: 5px 0px;
+}
+
+footer .listas li a:hover{
+    opacity: 0.5;
+}
+
+
+footer .listas h1{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0;
+    margin: 7px 0px;
+}
+
+footer h2{
+    margin-top: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    padding-right: 450px;
+}
+
+/*modal de aviso de direitos autorais*/
+
+.modal{
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(1, 1, 1, 0.7);
+    padding: 10px 70px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    gap: 100px;
+    font-weight: 400;
+    height: 100px;
+    z-index: 20;
+}
+
+
+.modal p{
+    padding: 0;
+    width: 70%;
+    gap: 0px;
+
+}
+
+.modal button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+}
+
+.modal button:hover{
+    opacity: 0.5;
+}
+
+/*modal para reproduzir trailer*/
+.modal-conteiner.mostra{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.7);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+html.mostra{
+    overflow-y:hidden;
+    
+}
+
+.modal-conteiner{
+    display: none;
+}
+
+.modal-conteiner video{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 1100px;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-conteiner button{
+    position: absolute;
+    top: 40px;
+    right: 180px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.modal-conteiner button:hover{
+    opacity: 0.7;
+}
+
+
+
+
+.midia-conteiner, #section1, #section-de-baixo{
+    display: none;
+}
+
+/* #tela-spin-offs{
+    display: none;
+} */
+
+
+
+/*Inicio TELA SPIN-OFFS*/
+#tela-spin-offs{
+    padding: 80px 70px;
+    margin: 0;
+}
+
+.twd-universe h1{
+    font-size: 50px;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.twd-universe p{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.card-conteiner-spin-offs{
+    margin: 90px 0;
+}
+
+.card-conteiner-spin-offs h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.card-serie{
+    margin-bottom: 70px;
+    padding: 0;
+    background-color: rgb(45, 45, 45);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 70px 21px 100px 93px 50px;
+    grid-template-areas:
+    "poster-serie h1"
+    "poster-serie ul"
+    "poster-serie p"
+    "poster-serie streamings"
+    "poster-serie button";
+    border-radius: 25px;
+}
+
+.poster-serie{
+    margin: 0;
+    padding: 0;
+    width: 230px;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 11 / 16;
+    border-radius: 25px 0 0 25px;
+    grid-area: poster-serie;
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.card-serie h1{
+    margin: 20px 0 10px 0;
+    padding: 0 20px;
+    grid-area: h1;
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+    font-size: 30px;
+}
+
+.card-serie ul{
+    margin: 0;
+    padding: 0 20px;
+    grid-area: ul;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    font-size: 14px;
+}
+.card-serie p{
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    padding: 0 200px 0 20px;
+    grid-area: p;
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+}
+
+.streaming-providers{
+    padding: 0 20px;
+    margin: 15px 0;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    grid-area: streamings;
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
+}
+
+
+.card-serie button{
+    margin: 0 20px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    grid-area: buttton;
+    grid-column: 2 / 2;
+    grid-row: 5 / 5;
+    width: fit-content;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: var(--color) solid 2px;
+    border-radius: 15px;
+    color: var(--color);
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.card-serie button:hover{
+    color: var(--background);
+    background-color: var(--color);
+    border: 2px solid var(--color);
+}
+/*fim TELA SPIN-OFFS*/
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 435px){
+    html{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        display: flex;
+        padding: 5px 7px;
+    }
+    
+    header nav{
+        padding: 10px;
+        height: auto;
+    }
+
+    header nav button{
+        display: flex;
+        flex-direction: row;
+        width: 95px;
+        align-items: center;
+        justify-content: center;
+        padding: 1px 2px;  
+        height: 33px;
+        font-size: 12px; 
+    }
+    .midia-conteiner video{
+        display: flex;
+        aspect-ratio: 9/16;
+        width: 100%;
+        height: 150vh;
+        filter: brightness(0.5);
+    }
+
+    .midia-conteiner{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -110px;
+        /* position: absolute; */
+        padding: 0px;
+        margin: 0;    
+        z-index: -5;
+        aspect-ratio: 9/16;
+    }
+
+    .midia-conteiner.blurred{
+        filter: blur(8px);
+    }
+
+    .midia-conteiner img{
+        display: flex;
+        object-fit: cover;
+        aspect-ratio: 9/16;
+        padding: 0;
+        margin: 0;
+        height: 700px;
+        width: 100%;
+        filter: brightness(0.7);
+    }
+
+    #section1{
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .detalhes{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .detalhes p{
+        padding: 0;
+        margin: 0;
+    }
+
+    .detalhes img{ /*logo da serie*/
+        display: flex;
+        object-fit: cover;
+        width: 50px;
+        margin-top: 90px;
+    }
+
+    #section1 .detalhes p{ 
+        padding: 0px;
+        margin-bottom: 50px;
+    }
+
+    #section1 .span-conteiner{
+        margin: 20px 0px 20px 0px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 50px;
+        row-gap: 5px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #section1 .sub-icons-conteiner .ativa-som{ /*botao 'ativar som' */
+        display: flex;
+    }
+    
+    #section1 .sub-icons-conteiner .desativa-som{ /*botao 'desativar som'*/
+        display: none;
+    }
+
+    .episodios{
+        padding: 20px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .episodios h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .episodios #season-select{
+        padding: 3px 4px;
+        cursor: pointer;
+        height: auto;
+        font-size: 12px;
+        width: 117px;
+    }
+    
+    .card-conteiner{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-conteiner .card-episodio{
+        margin: 0px;
+        padding: 10px;
+        width: 330px;
+        height: 110px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 15px;
+        gap: 5px;
+    }
+    
+    .card-conteiner .card-episodio img{
+        height: auto;
+        width: 115px;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .card-conteiner .card-episodio h1{
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+    }
+    
+    .card-conteiner .card-episodio p{
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+    }
+    
+    .card-episodio span h6{
+        position: absolute;
+        padding: 2px;
+        margin: 0;
+        top: 90px;
+        right: 10px;
+        width: 32px;
+        font-size: 9px;
+        font-weight: 400;
+        background-color: var(--background);
+        border-radius: 5px;
+    }
+    
+    .card-episodio span i{
+        font-size: 15px;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 90px;
+        left: -115px;
+    }    
+    
+    /*Conteiner de detalhes da serie*/
+    .card-conteiner-detalhes{
+        margin: 60px 0px;
+        padding: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 1fr 1fr;
+        grid-template-areas:
+        "h1 h1"
+        "elenco elenco"
+        "genero audio"
+        ;
+    }
+
+    .card-conteiner-detalhes > div:nth-child(2){
+        grid-area: elenco;
+    }
+
+    .card-conteiner-detalhes > div:nth-child(3){
+        grid-area: genero;
+        height: 87px;
+    }
+
+    .card-conteiner-detalhes > div:nth-child(4){
+        grid-area: audio;
+        height: 87px;
+    }
+
+    .card-conteiner-detalhes h1{
+        width: 100%;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0;
+        display: grid;
+        grid-area: h1;
+    }
+
+    .card-conteiner-detalhes span{
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .card-conteiner-detalhes p{
+        font-size: 10px;
+        margin: 4px;
+    }
+
+
+    .card-conteiner-detalhes .card-detalhes-serie{
+        margin: 0px;
+        padding: 5px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        border: solid 1px var(--color);
+        border-radius: 15px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1px;
+
+    }
+
+/*fim CARD CONTEINER*/
+
+
+/*card de personagens*/
+    .card-personagens{
+        margin: 70px 0px 0px 0px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .card-personagens .personagem{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .card-personagens .personagem img{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: 2px solid var(--color);
+    }
+
+    .card-personagens h1{
+        display: flex;
+        width: 100%;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-personagens .personagem h2{
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    /*CArd das communidades*/
+    .card-comunidades{
+        margin: 20px 0px 0px 0px;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    .card-comunidades .comunidade{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .card-comunidades .comunidade img{
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        border: 3px solid var(--color);
+    }
+    
+    .card-comunidades h1{
+        display: flex;
+        width: 100%;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        margin-top: 70px;
+    }
+    
+    .card-comunidades .comunidade h2{
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    footer{
+        margin: 0;
+        padding: 20px; 
+    }
+
+    footer .listas{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-self: flex-start;
+    }
+    
+    footer .listas li{
+        text-decoration: underline;
+        margin: 3px 0px;
+        font-size: 10px;
+    }
+    
+    footer .listas li a:hover{
+        opacity: 0.5;
+    }
+    
+    
+    footer .listas h1{
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0;
+        margin: 7px 0px;
+    }
+
+    footer h2{
+        margin-top: 30px;
+        font-size: 10px;
+        font-weight: 400;
+        text-align: left;
+        padding: 0px;
+    }
+    
+    .modal{
+        padding: 20px;
+        gap: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 150px;
+        bottom: 0;
+    }
+
+    .modal p{
+        margin: 0;
+        padding: 0 10px 0 0;
+        font-size: 14px;
+    }
+
+    .modal .btn-agree{
+        display: flex;
+        align-self: center;
+        width: 90px;
+        padding: 10px 14px;
+    }
+
+    .modal-conteiner{
+        width: 100vw;
+    }
+
+    .modal-conteiner video{
+        width: 350px;
+        height: auto;
+    }
+
+    .modal-conteiner button{
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        font-size: 35px;
+    }
+}

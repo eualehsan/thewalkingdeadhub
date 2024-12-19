@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/> <!-- font awesome -->
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+
+    <title>The Walking Dead</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="btn-header" onclick="showSection(1)" data-section="1">HQ</button>
+            <button class="btn-header active" onclick="showSection(2)" data-section="2">Série principal</button>
+            <button class="btn-header" onclick="showSection(3)" data-section="3">Spin-offs</button>
+        </nav>
+    </header>
+
+    <div class="midia-conteiner">
+        <video autoplay muted loop class="background-video">
+            <source src="./video/The-Walking-Dead-The-Journey-So-Far.mp4" type="video/mp4">
+            <img src="./img/smartphone-background.jpeg" alt="">
+        </video>
+    </div>
+
+
+    <section class="section" id="section1">
+        <div class="detalhes">
+            <img src="./img/twd-logo.png" id="logo-serie" alt="icone da serie">
+            <div class="span-conteiner">
+                <span id="class-indicativa">16</span>
+                <span>2010</span>
+                <span>11 temporadas</span>
+                
+                <span>177 episódios</span>
+                <span>45 min</span>
+                <span>Finalizada</span>
+            </div>
+            <p>The Walking Dead acompanha a vida na Terra após um apocalipse zumbi. A história segue um grupo de sobreviventes liderados pelo ex-policial Rick Grimes, que viajam em busca de um lar seguro. O mundo dominado pelos mortos afeta seus sobreviventes, e seus conflitos interpessoais representam um perigo maior para sua sobrevivência contínua do que os caminhantes que vagam.
+            </p>
+            <div class="sub-icons-conteiner">
+                <button class="btn-abre-trailer" id="btn-abreTrailer" onclick="abreTrailer()"><i class="fa-solid fa-play"></i>     Trailer</button>
+                <button class="ativa-som" id="enableSound" onclick="enableSound()">
+                    <i class="fa-solid fa-volume-high"></i>Ativar som
+                </button>
+                <button class="desativa-som" id="enableSound" onclick="enableSound()">
+                    <i class="fa-solid fa-volume-xmark"></i>Desativar som
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-de-baixo">
+        <form id="episodios" class="episodios">
+            <h1>Episódios</h1>
+            <select name="epsiodios" id="season-select">
+                <option value="1">Temporada 1</option>
+                <option value="2">Temporada 2</option>
+                <option value="3">Temporada 3</option>
+                <option value="4">Temporada 4</option>
+                <option value="5">Temporada 5</option>
+                <option value="6">Temporada 6</option>
+                <option value="7">Temporada 7</option>
+                <option value="8">Temporada 8</option>
+                <option value="9">Temporada 9</option>
+                <option value="10">Temporada 10</option>
+                <option value="11">Temporada 11</option>
+            </select>
+        </form>
+        
+        <div class="card-conteiner">
+            <div class="card-episodio">
+
+                <img src="./img/s1e1.webp" alt="s1e1">
+                <span>
+                    <i class="fa-solid fa-play"></i>
+                    <h6>1h06 min</h6>
+                </span>
+                <div>
+                    <h1>1. Days gone bye</h1>
+                    <p id="data-episodio">31/10/2010</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, vero vitae. Iste, eos? Asperiores veniam magnam deleniti nihil explicabo.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-conteiner-detalhes">
+            <h1>Detalhes</h1>
+
+            <div class="card-detalhes-serie">
+                <p><span>Elenco <br></span>
+                    Andrew Lincoln, Steven Yeun, Norman Reedus, Chandler Riggs, Melissa McBride, Lauren Cohan, Danai Gurira, Alanna Masterson, Sonequa Martin-Green e Josh McDermitt
+                </p>
+            </div>
+
+            <div class="card-detalhes-serie">
+                <p><span>Gêneros <br></span>
+                    Série dramática, Série de ação e aventura, Série dos EUA, Série de terror e Série baseada em HQ
+                </p>
+
+            </div>
+
+            <div class="card-detalhes-serie">
+                <p><span>Streamings <br></span>
+                    Netflix, Disney+
+                </p>
+
+                <p><span>Áudio original<br></span>
+                    Inglês
+                </p>  
+            </div>
+        </div>
+
+        <div class="card-personagens"> <!-- PRINCIPAIS SOBREVIVENTES -->
+            <h1>Sobreviventes <br></h1>
+
+            <div class="personagem">
+                <img src="./img/rick_grimes.webp" alt="Rick Grimes">
+                <h2>Rick Grimes</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/daryl_dixon.webp" alt="Daryl Dixon">
+                <h2>Daryl Dixon</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/carol_peletier.webp" alt="Carol Peletier">
+                <h2>Carol Peletier</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/carl_grimes.webp" alt="Carl Grimes">
+                <h2>Carl Grimes</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/glenn_rhee.webp" alt="Glenn Rhee">
+                <h2>Glenn Rhee</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/maggie_greene.webp" alt="Maggie Rhee">
+                <h2>Maggie Rhee</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/michonne.webp" alt="Michonne">
+                <h2>Michonne</h2>
+            </div>
+        </div>
+
+        <div class="card-personagens"> <!-- WALKERS MEMORAVEIS -->
+            <h1>Walkers memoráveis <br></h1>
+
+            <div class="personagem">
+                <img src="./img/w_summer.webp" alt="Summer">
+                <h2>Summer</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/w_hannah.jpg" alt="Walker da bicicleta">
+                <h2>Hannah</h2>
+            </div>
+            
+            <div class="personagem">
+                <img src="./img/w_lonely_walker.jpg" alt="Walker solitário">
+                <h2>Solitário</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/w-walker-with-armor.jpg" alt="Walker com armadura">
+                <h2>Com armadura</h2>
+            </div>
+
+            <div class="personagem">
+                <img src="./img/w_well_walker.jpg" alt="Walker do poço">
+                <h2>Do poço</h2>
+            </div>
+        </div>
+
+
+        <div class="card-comunidades"> <!-- COMUNIDADES PRESENTES NA SERIE -->
+            <h1>Locais <br></h1>
+
+            <div class="comunidade">
+                <img src="./img/c_Hershels_Farm.webp" alt="A fazenda">
+                <h2>A fazenda</h2>
+            </div>
+
+            <div class="comunidade">
+                <img src="./img/c_the_Prison.webp" alt="A prisâo">
+                <h2>Prisão</h2>
+            </div>
+
+            <div class="comunidade">
+                <img src="./img/c_alexandria.webp" alt="Alexandria">
+                <h2>Alexandria</h2>
+            </div>
+
+            <div class="comunidade">
+                <img src="./img/Hilltop.webp" alt="Hilltop">
+                <h2>Hilltop</h2>
+            </div>
+
+            <div class="comunidade">
+                <img src="./img/c_the_Kingdom.webp" alt="O Reino">
+                <h2>Reino</h2>
+            </div>
+            
+            <div class="comunidade">
+                <img src="./img/c_the_sanctuary.webp" alt="Santuário">
+                <h2>Santuário</h2>
+            </div>
+
+            <div class="comunidade">
+                <img src="./img/c_The_Commonwealth.webp" alt="A Commonwealth">
+                <h2>Commonwealth</h2>
+            </div>
+        </div>
+    </section>
+
+<!-- 
+    <section class="section" id="section2">
+       
+    </section> -->
+    
+    <div class="modal">
+        <p>Este site é um hub informativo, dedicado a fornecer informações sobre a série The Walking Dead. Não oferecemos acesso para assistir ao conteúdo, pois não temos permissão para distribuir ou exibir o conteúdo original.</p>
+        
+            <button onclick="btnAgree()" class="btn-agree">
+                Entendi
+            </button>
+    </div>
+
+
+    <div class="modal-conteiner">
+        <div class="modal-video">
+            <video controls autoplay class="video-modal">
+                <source src="./video/The-Walking-Dead-The-Journey-So-Far.mp4">
+                poster
+            </video>
+            <button class="btn-fecha-modal" onclick="fechaModal()"><i class="fa-regular fa-circle-xmark"></i></button>
+        </div>
+    </div>
+
+
+
+    <section id="tela-spin-offs">
+        <div class="twd-universe">
+            <h1>O universo de The Walking Dead</h1>
+            <p>Conheça as séries derivadas de The Walking Dead. Histórias que se passam no mesmo universo da série principal. Desde o que aconteceu antes de Rick acordar no hospital em Atlanta até o que acontece com ele após ser levado pelo helicóptero.</p>
+        </div>
+        <div class="card-conteiner-spin-offs">
+            <h1>Pós The walking Dead</h1>
+            <div class="card-serie">
+                <img class="poster-serie" src="./img/twd-daryl-dixon-series.webp" alt=".">
+                <h1>The Walking Dead: Daryl Dixon</h1>
+                <ul>
+                    <span id="class-indicativa">16</span>
+                    <li>2 Temporadas</li>
+                    <li>12 Episódios</li>
+                    <li>55 min</li>
+                    <li>2023</li>
+                    <li>Continuando</li>
+                </ul>
+                <img class="streaming-providers" src="" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias excepturi, tempore quaerat eos perspiciatis quisquam, aspernatur, ipsam aliquam debitis inventore reiciendis quo mollitia repellat necessitatibus dolor quia cupiditate? Ea?</p>
+                <button>Ver detalhes <i class="fa-solid fa-circle-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <div class="listas">
+        <ul>
+            <h1>Redes sociais</h1>
+            <li><a target="_blank" href="">Instagram</a></li>
+            <li><a target="_blank" href="">Github</a></li>
+            <li><a target="_blank" href="">Portifóflo</a></li>
+        </ul>
+
+        <ul>
+            <h1>Referências</h1>
+            <li><a target="_blank" href="https://developer.themoviedb.org/docs/getting-started">API TMDB</a></li>
+            <li><a target="_blank" href="https://walkingdead.fandom.com/wiki/The_Walking_Dead_Wiki">walkingdead.fandom</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/@TheWalkingDead">The Walking Dead no Youtube</a></li>
+        </ul>
+
+    </div>
+    <h2>
+    'The walking Dead' é uma marca registrada de AMC Studios, todos os direitos reservados. Este site não possui afiliação oficial com a AMC Studios ou seus licenciados.
+    </h2>
+    <p>Desenvolvido por Alessandro Sampaio copyright 2024</p>
+</footer>
+</html>
