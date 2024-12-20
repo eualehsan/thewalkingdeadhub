@@ -6,7 +6,6 @@
 }
 
 html{
-    scroll-behavior: smooth;
     font-family: 'poppins', sans-serif;
     overflow-x: hidden;
 }
@@ -652,21 +651,21 @@ html.mostra{
     opacity: 0.7;
 }
 
-
-
-
-.midia-conteiner, #section1, #section-de-baixo{
-    display: none;
+#tela-2{
+    display: contents;
 }
 
-/* #tela-spin-offs{
-    display: none;
-} */
+
+
+
+#tela-3{
+    display: none; 
+}
 
 
 
 /*Inicio TELA SPIN-OFFS*/
-#tela-spin-offs{
+#tela-3{
     padding: 80px 70px;
     margin: 0;
 }

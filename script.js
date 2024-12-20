@@ -18,33 +18,78 @@ if(localStorage.avisoDeDireitosAutorais == "entendi"){ //ao abrir o site verific
 }
 
 
-function showSection(sectionNumber){ //ativa os botoes do cabeçalho
+function showSection(sectionNumber) {
+    // Seleciona todos os botões do cabeçalho
     const buttonsHeader = document.querySelectorAll(".btn-header");
+    // Seleciona todas as sections que precisam ser exibidas ou ocultadas
+    const sections = document.querySelectorAll("section");
+    const videoContainer = document.querySelector(".midia-conteiner");
+    const backgroundVideo = document.querySelector(".background-video");
 
+    // Remove a classe 'active' de todos os botões
     buttonsHeader.forEach(button => {
         button.classList.remove("active");
     });
 
+    // Adiciona a classe 'active' ao botão selecionado
     const selectedButton = document.querySelector(`.btn-header[data-section="${sectionNumber}"]`);
     selectedButton.classList.add("active");
+
+    // Oculta todas as sections
+    sections.forEach(section => {
+        section.style.display = "none";
+    });
+
+    // Exibe apenas a seção correspondente ao botão clicado
+    const selectedSection = document.getElementById(`tela-${sectionNumber}`);
+    if (selectedSection) {
+        selectedSection.style.display = "block";
+        window.scrollTo({
+            top: 0,
+             // Para uma rolagem suave
+        });
+    }
+
+    // Controle do vídeo
+    if (sectionNumber === 2) {
+        backgroundVideo.play();
+        
+        // Adiciona um evento de rolagem para pausar o vídeo e aplicar o desfoque
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                videoContainer.classList.add("blurred");
+                if (!backgroundVideo.paused) {
+                    backgroundVideo.pause();
+                }
+            } else {
+                videoContainer.classList.remove("blurred");
+                if (backgroundVideo.paused) {
+                    backgroundVideo.play();
+                }
+            }
+        });
+    } else {
+        backgroundVideo.pause();
+    }
 }
 
-window.addEventListener("scroll", function () { //pausa e da blur no video
-    const videoContainer = document.querySelector(".midia-conteiner");
-    const video = document.querySelector(".background-video");
 
-    if (window.scrollY > 400) { 
-        videoContainer.classList.add("blurred");
-        if (!video.paused) {
-            video.pause();
-        }
-    } else {
-        videoContainer.classList.remove("blurred");
-        if (video.paused) {
-            video.play();
-        }
-    }
-});
+// window.addEventListener("scroll", function () { //pausa e da blur no video
+//     const videoContainer = document.querySelector(".midia-conteiner");
+//     const video = document.querySelector(".background-video");
+
+//     if (window.scrollY > 400) { 
+//         videoContainer.classList.add("blurred");
+//         if (!video.paused) {
+//             video.pause();
+//         }
+//     } else {
+//         videoContainer.classList.remove("blurred");
+//         if (video.paused) {
+//             video.play();
+//         }
+//     }
+// });
 
 function enableSound() { //ativa o som do video
     const video = document.querySelector(".background-video");
@@ -107,13 +152,13 @@ function displayEpisodes(episodes) {
     });
 }
 
-// Evento para capturar a poster selecionada
+// Evento para capturar o poster selecionado
 document.getElementById('season-select').addEventListener('change', (event) => {
     const seasonNumber = event.target.value;
     fetchEpisodes(seasonNumber);
 });
 
-// Carregar episódios da primeira poster ao iniciar
+// Carregar episódios do primeiro poster ao iniciar
 fetchEpisodes(1);
 
 
