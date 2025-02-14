@@ -159,6 +159,10 @@ document.addEventListener('DOMContentLoaded', () => { //fecha janela do trailer
     })
 });
 
+
+
+
+
 // Configurações da API
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -192,12 +196,9 @@ async function fetchStreamingProviders(seriesId) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-
-        // Selecionar os provedores para o Brasil (ou outro país)
-        const providers = data.results?.BR?.flatrate || []; // "flatrate" indica streaming
-        return providers;
+        return data.results.BR?.flatrate || []; // Retorna a lista de provedores no Brasil
     } catch (error) {
-        console.error(`Erro ao buscar provedores de streaming para a série ${seriesId}:`, error);
+        console.error(`Erro ao buscar provedores de streaming para série com ID ${seriesId}:`, error);
         return [];
     }
 }
@@ -220,7 +221,7 @@ async function displaySpinOffs() {
                 episode_run_time,
                 first_air_date,
                 overview,
-                status,
+                status
             } = seriesData;
 
             const providerLogos = providers
@@ -235,6 +236,9 @@ async function displaySpinOffs() {
             const averageRuntime = episode_run_time.length ? `${Math.round(episode_run_time[0])} min` : '50 min';
             const releaseYear = first_air_date ? first_air_date.split('-')[0] : 'N/A';
             const seriesStatus = status === 'Ended' ? 'Encerrada' : status === 'Returning Series' ? 'Continuando' : 'Cancelada';
+            const providerNames = providers.length > 0
+                ? `${providers.map(p => p.provider_name).join(', ')}`
+                : 'Indisponivel nos serviços de streaming';
 
             // Preencher o card
             card.innerHTML = `
@@ -248,7 +252,7 @@ async function displaySpinOffs() {
                     <li>${releaseYear}</li>
                     <li>${seriesStatus}</li>
                 </ul>
-                ${providerLogos} 
+                <h6><i class="fa-solid fa-desktop"></i>${providerNames}</h6>
                 <p>${overview || 'Descrição não disponível.'}</p>
                 <button>Ver detalhes <i class="fa-solid fa-circle-arrow-right"></i></button>
             `;

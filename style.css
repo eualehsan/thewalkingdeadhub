@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*font poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font poppins*/
 
-:root{
+:root {
     --background: rgb(21, 21, 21);
     --color: rgb(191, 191, 191);
 }
 
-html{
+html {
     font-family: 'poppins', sans-serif;
     overflow-x: hidden;
 }
 
-body{
+body {
     position: relative;
     margin: 0;
     padding: 0;
@@ -19,16 +20,16 @@ body{
     color: var(--color);
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--color);
 }
 
-.section{
+.section {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -37,12 +38,12 @@ a{
     padding: 20px 70px;
 }
 
-header{
+header {
     position: fixed;
     top: 10px;
     left: 50%;
     transform: translate(-50%);
-    height:50px;
+    height: 50px;
     padding: 2px 15px;
     display: flex;
     align-items: center;
@@ -56,22 +57,23 @@ header{
 }
 
 header.scrolled {
-    background-color: rgba(21, 21, 21, 0.302); /* Fundo ao rolar */
+    background-color: rgba(21, 21, 21, 0.302);
+    /* Fundo ao rolar */
     backdrop-filter: blur(25px);
 }
 
-header nav{
+header nav {
     padding: 5px;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-header nav button{
+header nav button {
     background-color: transparent;
     padding: 5px 10px;
     border-radius: 25px;
-    color:var(--color);
+    color: var(--color);
     border: solid 2px var(--color);
     cursor: pointer;
     opacity: 0.7;
@@ -79,8 +81,8 @@ header nav button{
     transition: ease-in-out 0.5s;
 }
 
-header nav button:hover{
-    border:solid 2px transparent;
+header nav button:hover {
+    border: solid 2px transparent;
     background-color: rgba(191, 191, 191, 0.4);
     backdrop-filter: blur(10px);
     color: var(--background);
@@ -88,15 +90,15 @@ header nav button:hover{
     transition: border 0.7s ease-in-out, background-color, 0.7s ease-in-out, color 0.7s ease-in-out;
 }
 
-header nav button.active{
-    border:solid 2px transparent;
+header nav button.active {
+    border: solid 2px transparent;
     background-color: white;
     backdrop-filter: blur(10px);
     color: var(--background);
     opacity: 1;
 }
 
-#section1{
+#section1 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -113,13 +115,13 @@ header nav button.active{
     top: 0;
     /* position: absolute; */
     padding: 0px;
-    margin: 0;    
+    margin: 0;
     width: 100%;
     height: 700px;
     z-index: -5;
 }
 
-.midia-conteiner video{
+.midia-conteiner video {
     object-fit: cover;
     aspect-ratio: 16/9;
     padding: 0;
@@ -129,27 +131,29 @@ header nav button.active{
     filter: brightness(0.7);
 }
 
-.midia-conteiner img{
+.midia-conteiner img {
     display: none;
 }
 
-.midia-conteiner.blurred { /* desfoque utilizado no javascript*/
+.midia-conteiner.blurred {
+    /* desfoque utilizado no javascript*/
     filter: blur(8px);
 }
 
-#section1 .detalhes img{ /*logo*/
+#section1 .detalhes img {
+    /*logo*/
     width: 300px;
     filter: invert(100);
 }
 
-#section1 .span-conteiner{
+#section1 .span-conteiner {
     margin-top: 15px;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-#class-indicativa{
+#class-indicativa {
     margin: 0;
     padding: 2px 6px;
     background-color: rgb(210, 40, 40);
@@ -162,17 +166,18 @@ header nav button.active{
     border-radius: 5px;
 }
 
-#section1 .detalhes p{ 
+#section1 .detalhes p {
     padding: 0px 600px 0px 0px;
 }
 
-#section1 .sub-icons-conteiner{
+#section1 .sub-icons-conteiner {
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-#section1 .sub-icons-conteiner button{ /*botoes 'trailer' e 'ativar som'*/
+#section1 .sub-icons-conteiner button {
+    /*botoes 'trailer' e 'ativar som'*/
     background-color: transparent;
     color: var(--color);
     border: solid 2px var(--color);
@@ -186,21 +191,24 @@ header nav button.active{
     gap: 7px;
 }
 
-#section1 .sub-icons-conteiner .ativa-som{ /*botao 'ativar som' */
+#section1 .sub-icons-conteiner .ativa-som {
+    /*botao 'ativar som' */
     display: flex;
     gap: 7px;
 }
 
-#section1 .sub-icons-conteiner .desativa-som{ /*botao 'desativar som'*/
+#section1 .sub-icons-conteiner .desativa-som {
+    /*botao 'desativar som'*/
     display: none;
     gap: 7px;
 }
 
-#section1 .sub-icons-conteiner button:hover{ /* HOVER botoes 'trailer' e 'ativar som'*/
+#section1 .sub-icons-conteiner button:hover {
+    /* HOVER botoes 'trailer' e 'ativar som'*/
     opacity: 0.5;
 }
 
-.episodios{
+.episodios {
     padding: 0px 70px;
     align-items: center;
     display: flex;
@@ -208,26 +216,26 @@ header nav button.active{
     gap: 20px;
 }
 
-.episodios #season-select{
+.episodios #season-select {
     cursor: pointer;
 }
 
-.episodios h1{
+.episodios h1 {
     font-size: 40px;
     font-weight: 700;
 }
 
-.episodios select{
+.episodios select {
     padding: 5px 10px;
     height: auto;
-    background-color:transparent;
+    background-color: transparent;
     color: var(--color);
     border: solid 2px var(--color);
     border-radius: 25px;
     cursor: pointer;
 }
 
-#section-2{
+#section-2 {
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
@@ -273,7 +281,7 @@ header nav button.active{
 
 /*section1 CARD CONTEINER*/
 
-.card-conteiner{
+.card-conteiner {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -282,7 +290,7 @@ header nav button.active{
     justify-content: center;
 }
 
-.card-conteiner .card-episodio{
+.card-conteiner .card-episodio {
     margin: 10px 0px;
     padding: 10px;
     width: 280px;
@@ -298,26 +306,26 @@ header nav button.active{
     cursor: not-allowed;
 }
 
-.card-conteiner .card-episodio img{
+.card-conteiner .card-episodio img {
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.card-conteiner .card-episodio h1{
+.card-conteiner .card-episodio h1 {
     padding: 0;
     margin: 10px 0;
     font-size: 15px;
 }
 
-.card-conteiner .card-episodio p{
+.card-conteiner .card-episodio p {
     padding: 0;
     margin: 0;
     font-size: 13px;
 
 }
 
-.card-conteiner .card-episodio span{
+.card-conteiner .card-episodio span {
     position: relative;
     display: flex;
     align-items: center;
@@ -326,7 +334,7 @@ header nav button.active{
     font-size: 20px;
 }
 
-.card-episodio span h6{
+.card-episodio span h6 {
     position: absolute;
     padding: 2px 4px;
     margin: 0;
@@ -338,7 +346,7 @@ header nav button.active{
     border-radius: 5px;
 }
 
-.card-episodio span i{
+.card-episodio span i {
     color: white;
     position: absolute;
     margin: 0;
@@ -350,7 +358,7 @@ header nav button.active{
 
 
 /*Conteiner de detalhes da serie*/
-.card-conteiner-detalhes{
+.card-conteiner-detalhes {
     margin: 70px 0px;
     padding: 0px 70px;
     display: flex;
@@ -362,26 +370,26 @@ header nav button.active{
 
 }
 
-.card-conteiner-detalhes h1{
+.card-conteiner-detalhes h1 {
     width: 100%;
     font-size: 40px;
     font-weight: 700;
     margin: 0;
 }
 
-.card-conteiner-detalhes span{
+.card-conteiner-detalhes span {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 3px;
 }
 
-.card-conteiner-detalhes p{
+.card-conteiner-detalhes p {
     font-size: 13px;
     margin: 4px;
 }
 
 
-.card-conteiner-detalhes .card-detalhes-serie{
+.card-conteiner-detalhes .card-detalhes-serie {
     margin: 10px 0px;
     padding: 15px;
     width: 290px;
@@ -402,7 +410,7 @@ header nav button.active{
 /*fim CARD CONTEINER*/
 
 /*card de personagens*/
-.card-personagens{
+.card-personagens {
     margin: 70px 0px 0px 0px;
     padding: 0px 70px;
     display: flex;
@@ -414,25 +422,25 @@ header nav button.active{
     height: 290px;
 }
 
-.card-personagens .personagem{
+.card-personagens .personagem {
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
 
-.card-personagens .personagem img{
-   width: 145px;
-   height: auto;
-   border-radius: 50%;
-   aspect-ratio: 1/1;
-   object-fit: cover;
-   margin: 0;
-   padding: 0;
-   border: 3px solid var(--color);
+.card-personagens .personagem img {
+    width: 145px;
+    height: auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: 3px solid var(--color);
 }
 
-.card-personagens h1{
+.card-personagens h1 {
     display: flex;
     width: 100%;
     font-size: 40px;
@@ -441,14 +449,14 @@ header nav button.active{
     padding: 0;
 }
 
-.card-personagens .personagem h2{
+.card-personagens .personagem h2 {
     font-size: 17px;
     font-weight: 600;
 }
 
 
 /*CArd das communidades*/
-.card-comunidades{
+.card-comunidades {
     margin: 20px 0px 0px 0px;
     padding: 0px 70px;
     display: flex;
@@ -460,14 +468,14 @@ header nav button.active{
     margin-bottom: 100px;
 }
 
-.card-comunidades .comunidade{
+.card-comunidades .comunidade {
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
 
-.card-comunidades .comunidade img{
+.card-comunidades .comunidade img {
     width: 145px;
     height: auto;
     border-radius: 50%;
@@ -477,8 +485,8 @@ header nav button.active{
     padding: 0;
     border: 3px solid var(--color);
 }
- 
-.card-comunidades h1{
+
+.card-comunidades h1 {
     display: flex;
     width: 100%;
     font-size: 40px;
@@ -487,14 +495,14 @@ header nav button.active{
     padding: 0;
     margin-top: 70px;
 }
- 
-.card-comunidades .comunidade h2{
+
+.card-comunidades .comunidade h2 {
     font-size: 17px;
     font-weight: 600;
 }
 
 /*CABEÇALHO*/
-footer{
+footer {
     margin: 0;
     padding: 0px 70px;
     background-color: rgba(37, 37, 37, 0.5);
@@ -507,7 +515,7 @@ footer{
     box-shadow: 1px -2px 10px rgba(37, 37, 37, 0.7);
 }
 
-footer .listas{
+footer .listas {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
@@ -515,31 +523,31 @@ footer .listas{
     align-self: flex-start;
 }
 
-footer .listas ul{
+footer .listas ul {
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
 }
 
-footer .listas li{
+footer .listas li {
     text-decoration: underline;
     margin: 5px 0px;
 }
 
-footer .listas li a:hover{
+footer .listas li a:hover {
     opacity: 0.5;
 }
 
 
-footer .listas h1{
+footer .listas h1 {
     font-size: 15px;
     font-weight: 600;
     padding: 0;
     margin: 7px 0px;
 }
 
-footer h2{
+footer h2 {
     margin-top: 30px;
     font-size: 13px;
     font-weight: 400;
@@ -549,7 +557,7 @@ footer h2{
 
 /*modal de aviso de direitos autorais*/
 
-.modal{
+.modal {
     position: fixed;
     bottom: 0;
     background-color: rgba(1, 1, 1, 0.7);
@@ -567,14 +575,14 @@ footer h2{
 }
 
 
-.modal p{
+.modal p {
     padding: 0;
     width: 70%;
     gap: 0px;
 
 }
 
-.modal button{
+.modal button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -590,12 +598,12 @@ footer h2{
     transition: ease-in-out 0.3s;
 }
 
-.modal button:hover{
+.modal button:hover {
     opacity: 0.5;
 }
 
 /*modal para reproduzir trailer*/
-.modal-conteiner.mostra{
+.modal-conteiner.mostra {
     position: absolute;
     top: 0;
     width: 100%;
@@ -608,16 +616,16 @@ footer h2{
     z-index: 20;
 }
 
-html.mostra{
-    overflow-y:hidden;
-    
+html.mostra {
+    overflow-y: hidden;
+
 }
 
-.modal-conteiner{
+.modal-conteiner {
     display: none;
 }
 
-.modal-conteiner video{
+.modal-conteiner video {
     aspect-ratio: 16/9;
     object-fit: cover;
     width: 1100px;
@@ -626,7 +634,7 @@ html.mostra{
     position: relative;
 }
 
-.modal-conteiner button{
+.modal-conteiner button {
     position: absolute;
     top: 40px;
     right: 180px;
@@ -647,71 +655,67 @@ html.mostra{
     transition: ease-in-out 0.3s;
 }
 
-.modal-conteiner button:hover{
+.modal-conteiner button:hover {
     opacity: 0.7;
 }
 
-#tela-2{
+#tela-2 {
     display: contents;
 }
 
 
-
-
-#tela-3{
-    display: none; 
+#tela-3 {
+    display: none;
 }
 
-
-
 /*Inicio TELA SPIN-OFFS*/
-#tela-3{
+#tela-3 {
     padding: 80px 70px;
     margin: 0;
 }
 
-.twd-universe h1{
+.twd-universe h1 {
     font-size: 50px;
     padding: 0;
     margin: 15px 0;
 }
 
-.twd-universe p{
+.twd-universe p {
     font-size: 15px;
     padding: 0;
     margin: 0;
 }
 
-.card-conteiner-spin-offs{
-    margin: 90px 0;
+.card-conteiner-spin-offs {
+    margin: 50px 0;
 }
 
-.card-conteiner-spin-offs h1{
+.card-conteiner-spin-offs h1 {
     font-size: 30px;
     margin-bottom: 30px;
     padding: 0;
 }
 
-.card-serie{
-    margin-bottom: 70px;
+.card-serie {
+    margin-bottom: 50px;
     padding: 0;
-    background-color: rgb(45, 45, 45);
+    background-color: rgba(45, 45, 45, 0.7);
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 70px 21px 100px 93px 50px;
+    grid-template-rows: 70px 21px 100px 55px 55px;
     grid-template-areas:
-    "poster-serie h1"
-    "poster-serie ul"
-    "poster-serie p"
-    "poster-serie streamings"
-    "poster-serie button";
+        "poster-serie h1"
+        "poster-serie ul"
+        "poster-serie p"
+        "poster-serie streamings"
+        "poster-serie button";
     border-radius: 25px;
 }
 
-.poster-serie{
+.poster-serie {
     margin: 0;
     padding: 0;
-    width: 230px;
+    width: 213px;
     height: auto;
     object-fit: cover;
     aspect-ratio: 11 / 16;
@@ -721,7 +725,7 @@ html.mostra{
     grid-row: span 3;
 }
 
-.card-serie h1{
+.card-serie h1 {
     margin: 20px 0 10px 0;
     padding: 0 20px;
     grid-area: h1;
@@ -730,7 +734,7 @@ html.mostra{
     font-size: 30px;
 }
 
-.card-serie ul{
+.card-serie ul {
     margin: 0;
     padding: 0 20px;
     grid-area: ul;
@@ -741,7 +745,8 @@ html.mostra{
     column-gap: 15px;
     font-size: 14px;
 }
-.card-serie p{
+
+.card-serie p {
     margin: 0;
     margin-top: 12px;
     margin-bottom: 20px;
@@ -751,20 +756,23 @@ html.mostra{
     grid-row: 3 / 3;
 }
 
-.streaming-providers{
+.card-serie h6 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    gap: 10px;
+    font-size: 16px;
+    grid-area: streamings;
     padding: 0 20px;
     margin: 15px 0;
-    width: 35px;
-    height: 35px;
+    width: auto;
     margin-right: 10px;
-    border-radius: 50%;
-    grid-area: streamings;
     grid-column: 2 / 2;
     grid-row: 4 / 4;
 }
 
-
-.card-serie button{
+.card-serie button {
     margin: 0 20px;
     margin-bottom: 20px;
     padding: 5px 10px;
@@ -778,6 +786,7 @@ html.mostra{
     column-gap: 10px;
     align-items: center;
     justify-content: center;
+    align-self: center;
     background-color: transparent;
     border: var(--color) solid 2px;
     border-radius: 15px;
@@ -786,11 +795,12 @@ html.mostra{
     transition: ease-in-out 0.3s;
 }
 
-.card-serie button:hover{
+.card-serie button:hover {
     color: var(--background);
     background-color: var(--color);
     border: 2px solid var(--color);
 }
+
 /*fim TELA SPIN-OFFS*/
 
 
@@ -798,38 +808,41 @@ html.mostra{
 
 
 
-@media (min-width: 320px) and (max-width: 435px){
-    html{
+@media (min-width: 320px) and (max-width: 435px) {
+    html {
         margin: 0;
         padding: 0;
     }
-    body{
+
+    body {
         width: 100vw;
         height: auto;
         padding: 0;
         margin: 0;
     }
-    header{
+
+    header {
         display: flex;
         padding: 5px 7px;
     }
-    
-    header nav{
+
+    header nav {
         padding: 10px;
         height: auto;
     }
 
-    header nav button{
+    header nav button {
         display: flex;
         flex-direction: row;
         width: 95px;
         align-items: center;
         justify-content: center;
-        padding: 1px 2px;  
+        padding: 1px 2px;
         height: 33px;
-        font-size: 12px; 
+        font-size: 12px;
     }
-    .midia-conteiner video{
+
+    .midia-conteiner video {
         display: flex;
         aspect-ratio: 9/16;
         width: 100%;
@@ -837,7 +850,7 @@ html.mostra{
         filter: brightness(0.5);
     }
 
-    .midia-conteiner{
+    .midia-conteiner {
         position: fixed;
         display: flex;
         align-items: center;
@@ -845,16 +858,16 @@ html.mostra{
         top: -110px;
         /* position: absolute; */
         padding: 0px;
-        margin: 0;    
+        margin: 0;
         z-index: -5;
         aspect-ratio: 9/16;
     }
 
-    .midia-conteiner.blurred{
+    .midia-conteiner.blurred {
         filter: blur(8px);
     }
 
-    .midia-conteiner img{
+    .midia-conteiner img {
         display: flex;
         object-fit: cover;
         aspect-ratio: 9/16;
@@ -865,7 +878,7 @@ html.mostra{
         filter: brightness(0.7);
     }
 
-    #section1{
+    #section1 {
         margin: 0;
         padding: 20px;
         display: flex;
@@ -877,7 +890,7 @@ html.mostra{
         font-size: 14px;
     }
 
-    .detalhes{
+    .detalhes {
         padding: 0;
         margin: 0;
         display: flex;
@@ -886,25 +899,26 @@ html.mostra{
         justify-content: center;
     }
 
-    
-    .detalhes p{
+
+    .detalhes p {
         padding: 0;
         margin: 0;
     }
 
-    .detalhes img{ /*logo da serie*/
+    .detalhes img {
+        /*logo da serie*/
         display: flex;
         object-fit: cover;
         width: 50px;
         margin-top: 90px;
     }
 
-    #section1 .detalhes p{ 
+    #section1 .detalhes p {
         padding: 0px;
         margin-bottom: 50px;
     }
 
-    #section1 .span-conteiner{
+    #section1 .span-conteiner {
         margin: 20px 0px 20px 0px;
         display: flex;
         flex-direction: row;
@@ -915,15 +929,17 @@ html.mostra{
         flex-wrap: wrap;
     }
 
-    #section1 .sub-icons-conteiner .ativa-som{ /*botao 'ativar som' */
+    #section1 .sub-icons-conteiner .ativa-som {
+        /*botao 'ativar som' */
         display: flex;
     }
-    
-    #section1 .sub-icons-conteiner .desativa-som{ /*botao 'desativar som'*/
+
+    #section1 .sub-icons-conteiner .desativa-som {
+        /*botao 'desativar som'*/
         display: none;
     }
 
-    .episodios{
+    .episodios {
         padding: 20px;
         align-items: center;
         display: flex;
@@ -931,20 +947,20 @@ html.mostra{
         gap: 20px;
     }
 
-    .episodios h1{
+    .episodios h1 {
         font-size: 28px;
         font-weight: 700;
     }
 
-    .episodios #season-select{
+    .episodios #season-select {
         padding: 3px 4px;
         cursor: pointer;
         height: auto;
         font-size: 12px;
         width: 117px;
     }
-    
-    .card-conteiner{
+
+    .card-conteiner {
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -954,7 +970,7 @@ html.mostra{
         justify-content: center;
     }
 
-    .card-conteiner .card-episodio{
+    .card-conteiner .card-episodio {
         margin: 0px;
         padding: 10px;
         width: 330px;
@@ -964,28 +980,28 @@ html.mostra{
         border-radius: 15px;
         gap: 5px;
     }
-    
-    .card-conteiner .card-episodio img{
+
+    .card-conteiner .card-episodio img {
         height: auto;
         width: 115px;
         aspect-ratio: 16/9;
         object-fit: cover;
         border-radius: 10px;
     }
-    
-    .card-conteiner .card-episodio h1{
+
+    .card-conteiner .card-episodio h1 {
         padding: 0;
         margin: 0;
         font-size: 12px;
     }
-    
-    .card-conteiner .card-episodio p{
+
+    .card-conteiner .card-episodio p {
         padding: 0;
         margin: 0;
         font-size: 10px;
     }
-    
-    .card-episodio span h6{
+
+    .card-episodio span h6 {
         position: absolute;
         padding: 2px;
         margin: 0;
@@ -997,18 +1013,18 @@ html.mostra{
         background-color: var(--background);
         border-radius: 5px;
     }
-    
-    .card-episodio span i{
+
+    .card-episodio span i {
         font-size: 15px;
         position: absolute;
         margin: 0;
         padding: 0;
         top: 90px;
         left: -115px;
-    }    
-    
+    }
+
     /*Conteiner de detalhes da serie*/
-    .card-conteiner-detalhes{
+    .card-conteiner-detalhes {
         margin: 60px 0px;
         padding: 20px;
         flex-direction: column;
@@ -1020,27 +1036,27 @@ html.mostra{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 0.7fr 1fr 1fr;
         grid-template-areas:
-        "h1 h1"
-        "elenco elenco"
-        "genero audio"
+            "h1 h1"
+            "elenco elenco"
+            "genero audio"
         ;
     }
 
-    .card-conteiner-detalhes > div:nth-child(2){
+    .card-conteiner-detalhes>div:nth-child(2) {
         grid-area: elenco;
     }
 
-    .card-conteiner-detalhes > div:nth-child(3){
+    .card-conteiner-detalhes>div:nth-child(3) {
         grid-area: genero;
-        height: 87px;
+        height: 120px;
     }
 
-    .card-conteiner-detalhes > div:nth-child(4){
+    .card-conteiner-detalhes>div:nth-child(4) {
         grid-area: audio;
-        height: 87px;
+        height: 120px;
     }
 
-    .card-conteiner-detalhes h1{
+    .card-conteiner-detalhes h1 {
         width: 100%;
         font-size: 28px;
         font-weight: 700;
@@ -1049,19 +1065,19 @@ html.mostra{
         grid-area: h1;
     }
 
-    .card-conteiner-detalhes span{
-        font-size: 12px;
+    .card-conteiner-detalhes span {
+        font-size: 14px;
         font-weight: 600;
         margin-bottom: 5px;
     }
 
-    .card-conteiner-detalhes p{
-        font-size: 10px;
+    .card-conteiner-detalhes p {
+        font-size: 12px;
         margin: 4px;
     }
 
 
-    .card-conteiner-detalhes .card-detalhes-serie{
+    .card-conteiner-detalhes .card-detalhes-serie {
         margin: 0px;
         padding: 5px;
         width: auto;
@@ -1076,11 +1092,11 @@ html.mostra{
 
     }
 
-/*fim CARD CONTEINER*/
+    /*fim CARD CONTEINER*/
 
 
-/*card de personagens*/
-    .card-personagens{
+    /*card de personagens*/
+    .card-personagens {
         margin: 70px 0px 0px 0px;
         padding: 20px;
         display: flex;
@@ -1092,25 +1108,25 @@ html.mostra{
         height: auto;
     }
 
-    .card-personagens .personagem{
+    .card-personagens .personagem {
         align-items: center;
         justify-content: center;
         text-align: center;
     }
 
 
-    .card-personagens .personagem img{
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-    border: 2px solid var(--color);
+    .card-personagens .personagem img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        border: 2px solid var(--color);
     }
 
-    .card-personagens h1{
+    .card-personagens h1 {
         display: flex;
         width: 100%;
         font-size: 28px;
@@ -1119,13 +1135,13 @@ html.mostra{
         padding: 0;
     }
 
-    .card-personagens .personagem h2{
+    .card-personagens .personagem h2 {
         font-size: 12px;
         font-weight: 600;
     }
 
     /*CArd das communidades*/
-    .card-comunidades{
+    .card-comunidades {
         margin: 20px 0px 0px 0px;
         padding: 0px 20px;
         display: flex;
@@ -1137,14 +1153,14 @@ html.mostra{
         margin-bottom: 100px;
     }
 
-    .card-comunidades .comunidade{
+    .card-comunidades .comunidade {
         align-items: center;
         justify-content: center;
         text-align: center;
     }
 
 
-    .card-comunidades .comunidade img{
+    .card-comunidades .comunidade img {
         width: 100px;
         height: auto;
         border-radius: 50%;
@@ -1154,8 +1170,8 @@ html.mostra{
         padding: 0;
         border: 3px solid var(--color);
     }
-    
-    .card-comunidades h1{
+
+    .card-comunidades h1 {
         display: flex;
         width: 100%;
         font-size: 28px;
@@ -1164,11 +1180,12 @@ html.mostra{
         padding: 0;
         margin-top: 70px;
     }
-    
-    .card-comunidades .comunidade h2{
+
+    .card-comunidades .comunidade h2 {
         font-size: 12px;
         font-weight: 600;
     }
+    /*fim card comunidades*/
 
 
 
@@ -1184,49 +1201,48 @@ html.mostra{
 
 
 
-    
-    
 
-    footer{
+
+    footer {
         margin: 0;
-        padding: 20px; 
+        padding: 20px;
     }
 
-    footer .listas{
+    footer .listas {
         margin-top: 10px;
         display: flex;
         flex-direction: row;
         gap: 40px;
         align-self: flex-start;
     }
-    
-    footer .listas li{
+
+    footer .listas li {
         text-decoration: underline;
         margin: 3px 0px;
         font-size: 10px;
     }
-    
-    footer .listas li a:hover{
+
+    footer .listas li a:hover {
         opacity: 0.5;
     }
-    
-    
-    footer .listas h1{
+
+
+    footer .listas h1 {
         font-size: 12px;
         font-weight: 600;
         padding: 0;
         margin: 7px 0px;
     }
 
-    footer h2{
+    footer h2 {
         margin-top: 30px;
         font-size: 10px;
         font-weight: 400;
         text-align: left;
         padding: 0px;
     }
-    
-    .modal{
+
+    .modal {
         padding: 20px;
         gap: 0px;
         display: flex;
@@ -1236,29 +1252,29 @@ html.mostra{
         bottom: 0;
     }
 
-    .modal p{
+    .modal p {
         margin: 0;
         padding: 0 10px 0 0;
         font-size: 14px;
     }
 
-    .modal .btn-agree{
+    .modal .btn-agree {
         display: flex;
         align-self: center;
         width: 90px;
         padding: 10px 14px;
     }
 
-    .modal-conteiner{
+    .modal-conteiner {
         width: 100vw;
     }
 
-    .modal-conteiner video{
+    .modal-conteiner video {
         width: 350px;
         height: auto;
     }
 
-    .modal-conteiner button{
+    .modal-conteiner button {
         position: absolute;
         top: 40px;
         right: 30px;
