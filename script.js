@@ -46,50 +46,19 @@ function showSection(sectionNumber) {
         selectedSection.style.display = "block";
         window.scrollTo({
             top: 0,
-             // Para uma rolagem suave
+            behavior: 'smooth' // Para uma rolagem suave
         });
     }
 
     // Controle do vídeo
     if (sectionNumber === 2) {
         backgroundVideo.play();
-        
-        // Adiciona um evento de rolagem para pausar o vídeo e aplicar o desfoque
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 400) {
-                videoContainer.classList.add("blurred");
-                if (!backgroundVideo.paused) {
-                    backgroundVideo.pause();
-                }
-            } else {
-                videoContainer.classList.remove("blurred");
-                if (backgroundVideo.paused) {
-                    backgroundVideo.play();
-                }
-            }
-        });
+        videoContainer.classList.remove("blurred");
     } else {
         backgroundVideo.pause();
+        videoContainer.classList.add("blurred");
     }
 }
-
-
-// window.addEventListener("scroll", function () { //pausa e da blur no video
-//     const videoContainer = document.querySelector(".midia-conteiner");
-//     const video = document.querySelector(".background-video");
-
-//     if (window.scrollY > 400) { 
-//         videoContainer.classList.add("blurred");
-//         if (!video.paused) {
-//             video.pause();
-//         }
-//     } else {
-//         videoContainer.classList.remove("blurred");
-//         if (video.paused) {
-//             video.play();
-//         }
-//     }
-// });
 
 function enableSound() { //ativa o som do video
     const video = document.querySelector(".background-video");
@@ -161,9 +130,6 @@ document.getElementById('season-select').addEventListener('change', (event) => {
 // Carregar episódios do primeiro poster ao iniciar
 fetchEpisodes(1);
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => { //mostra janela do trailer
     const btnAbreTrailer = document.querySelector(".btn-abre-trailer");
     const modalConteiner = document.querySelector(".modal-conteiner");
@@ -192,12 +158,6 @@ document.addEventListener('DOMContentLoaded', () => { //fecha janela do trailer
         video.currentTime = 0;
     })
 });
-
-
-
-
-
-
 
 // Configurações da API
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
